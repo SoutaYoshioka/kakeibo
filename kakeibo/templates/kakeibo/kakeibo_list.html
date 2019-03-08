@@ -21,7 +21,7 @@
                                 <th class="text-center">カテゴリ</th>
                                 <th class="text-center">金額</th>
                                 <th class="text-center">メモ</th>
-                                <th class="text-center">更新ページ</th>
+                                <th class="text-center">更新・削除</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -31,8 +31,12 @@
                                 <td class="text-center" width="100">{{ item.category }}</td>
                                 <td class="text-center" width="140">{{ item.money }}</td>
                                 <td class="text-center" width="140">{{ item.memo }}</td>
-                                <td class="text-center" width="140"><a class="btn btn-primary"
-                                        href="{% url 'kakeibo:kakeibo_update' item.pk %}">更新ページリンク</a></td>
+                                <td class="text-center" width="140">
+                                    <a class="btn btn-primary"
+                                        href="{% url 'kakeibo:kakeibo_update' item.pk %}">更新ページ</a>
+                                    <a class="btn btn-danger"
+                                        href="{% url 'kakeibo:kakeibo_delete' item.pk %}">削除ページ</a>
+                                </td>
                             </tr>
                             {% endfor %}
                         </tbody>
