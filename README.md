@@ -1,3 +1,3 @@
 # kakeibo
 
-ローカルでは動くけどエラーで詰まってherokuにデプロイできない侍
+http://martinnnnn.pythonanywhere.com/kakeibo/kakeibo_list/
